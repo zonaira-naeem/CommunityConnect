@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+}
+
+.signin-btn {
+    padding: 10px 20px;
+    border: none;
+    background-color: #2d6cdf;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 80px 60px;
+}
+
+.hero-text {
+    width: 50%;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.report-btn,
+.map-btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.report-btn {
+    background-color: #2d6cdf;
+    color: white;
+}
+
+.map-btn {
+    background-color: #eeeeee;
+}
+
+.hero-image {
+    width: 40%;
+}
+
+.placeholder {
+    height: 300px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px dashed #999;
+    border-radius: 10px;
+}
