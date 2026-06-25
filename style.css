@@ -155,3 +155,39 @@ nav {
     font-size: 28px;
     margin-bottom: 10px;
 }
+.recent-issues {
+    padding: 70px 60px;
+}
+
+.recent-issues h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.issue-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px;
+    margin-bottom: 20px;
+
+    border-radius: 10px;
+    border: 1px solid #ddd;
+
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.issue-card h3 {
+    margin: 0 0 5px 0;
+}
+
+.issue-card button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+
+    background-color: #2d6cdf;
+    color: white;
+    cursor: pointer;
+}
