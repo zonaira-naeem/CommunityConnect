@@ -95,3 +95,32 @@ nav {
     border: 2px dashed #999;
     border-radius: 10px;
 }
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+    padding: 40px 60px;
+}
+
+.stat-card {
+    width: 200px;
+
+    text-align: center;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.stat-card h2 {
+    margin: 0;
+    color: #2d6cdf;
+    font-size: 36px;
+}
+
+.stat-card p {
+    margin-top: 10px;
+}
