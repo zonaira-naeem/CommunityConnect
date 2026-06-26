@@ -101,10 +101,13 @@ nav {
 
 .report-btn,
 .map-btn {
+    display: inline-block;
     padding: 12px 24px;
     border: none;
     border-radius: var(--radius);
     cursor: pointer;
+    text-decoration: none;
+    text-align: center;
 }
 
 .report-btn {
@@ -119,6 +122,7 @@ nav {
 
 .map-btn {
     background-color: #eeeeee;
+    color: var(--text-dark);
     transition: 0.3s;
 }
 
@@ -256,6 +260,208 @@ nav {
 
 .footer p {
     margin: 0;
+}
+/* ==========================================
+   MAP PAGE
+========================================== */
+
+.map-header {
+    text-align: center;
+    padding: 60px;
+}
+
+.map-header h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.map-header p {
+    max-width: 700px;
+    margin: auto;
+    color: var(--text-light);
+}
+
+.map-layout {
+    display: flex;
+    gap: 30px;
+    padding: 40px 60px;
+}
+
+/* LEFT PANEL */
+
+.filters {
+    width: 280px;
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.filters h2 {
+    margin-top: 0;
+}
+
+.filters h3 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.filters label {
+    display: block;
+    margin: 10px 0;
+}
+
+.filters input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-sizing: border-box;
+}
+
+.apply-btn {
+    width: 100%;
+    margin-top: 25px;
+    padding: 12px;
+    border: none;
+    border-radius: var(--radius);
+    background: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.apply-btn:hover {
+    background: var(--primary-hover);
+}
+
+/* RIGHT PANEL */
+
+.map-area {
+    flex: 1;
+}
+
+#map {
+    height: 700px;
+    width: 100%;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+
+.pin:hover{
+
+    transform:scale(1.4);
+
+}
+
+.safety{
+
+    background:#ef4444;
+
+    top:130px;
+
+    left:310px;
+
+}
+
+.infrastructure{
+
+    background:#3b82f6;
+
+    top:320px;
+
+    left:620px;
+
+}
+
+.environment{
+
+    background:#22c55e;
+
+    top:60px;
+
+    right:100px;
+
+}
+
+.accessibility{
+
+    background:#8b5cf6;
+
+    bottom:120px;
+
+    right:180px;
+
+}
+
+/* ISSUE CARD */
+
+.issue-preview {
+    margin: 40px 60px;
+    padding: 25px;
+
+    background: var(--card-bg);
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+}
+
+.issue-preview h2 {
+    margin-top: 0;
+}
+
+.issue-preview button {
+    margin-top: 20px;
+    padding: 12px 24px;
+
+    border: none;
+
+    border-radius: var(--radius);
+
+    background: var(--primary-color);
+
+    color: white;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.issue-preview button:hover {
+    background: var(--primary-hover);
+}
+
+/* FLOATING BUTTON */
+
+.floating-report {
+    position: fixed;
+
+    bottom: 30px;
+    right: 30px;
+
+    padding: 15px 24px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    background: var(--primary-color);
+
+    color: white;
+
+    cursor: pointer;
+
+    box-shadow: var(--shadow);
+
+    transition: 0.3s;
+}
+
+.floating-report:hover {
+    background: var(--primary-hover);
 }
 .container {
     width: 90%;

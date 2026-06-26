@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CommunityPulse | Map</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+/>
+</head>
+
+<body>
+
+    <nav>
+
+        <div class="logo">CommunityPulse</div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="map.html" class="active">Map</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+
+        <button class="signin-btn">Sign In</button>
+
+    </nav>
+
+    <section class="map-header">
+
+        <h1>Community Issue Map</h1>
+
+        <p>
+            Explore reported issues, discover community concerns, and
+            identify areas that need attention.
+        </p>
+
+    </section>
+
+    <section class="map-layout">
+
+        <aside class="filters">
+
+            <h2>Filters</h2>
+
+            <label>Search Issues</label>
+
+            <input type="text" placeholder="Search...">
+
+            <h3>Categories</h3>
+
+            <label><input type="checkbox"> Safety</label>
+            <label><input type="checkbox"> Infrastructure</label>
+            <label><input type="checkbox"> Environment</label>
+            <label><input type="checkbox"> Accessibility</label>
+            <label><input type="checkbox"> Transport</label>
+
+            <h3>Status</h3>
+
+            <label><input type="checkbox"> Reported</label>
+            <label><input type="checkbox"> Verified</label>
+            <label><input type="checkbox"> Resolved</label>
+<h3>Legend</h3>
+
+<p>🔴 Safety</p>
+
+<p>🔵 Infrastructure</p>
+
+<p>🟢 Environment</p>
+
+<p>🟣 Accessibility</p>
+
+            <button class="apply-btn">
+                Apply Filters
+            </button>
+
+        </aside>
+
+        <section class="map-area">
+
+    <div id="map"></div>
+</section>
+
+    </section>
+
+    <section class="issue-preview">
+
+        <h2>Crosswalk Missing Near School</h2>
+
+        <p>
+            Safety • Verified • High Priority
+        </p>
+
+        <p>
+            14 Community Verifications
+        </p>
+
+        <button>
+            View Details
+        </button>
+
+    </section>
+
+    <button class="floating-report">
+
+        + Report Issue
+
+    </button>
+
+    <footer class="footer">
+
+        <p>
+            Transparency builds trust. Together we build better communities.
+        </p>
+
+    </footer>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="script.js"></script>
+
+</body>
+
+</html>
