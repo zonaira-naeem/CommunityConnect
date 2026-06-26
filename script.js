@@ -56,7 +56,17 @@ const safetyMarker = L.marker([40.0015, -100.0020], {
     icon: redIcon
 }).addTo(map);
 
-safetyMarker.bindPopup("<b>Missing Crosswalk</b><br>Harmony Hills High School");
+safetyMarker.bindPopup(`
+    <b>🚸 Missing Crosswalk</b><br>
+    📍 Harmony Hills High School<br><br>
+
+    <strong>Status:</strong> Verified<br>
+    <strong>Priority:</strong> High<br><br>
+
+    <button onclick="window.location.href='issue.html'">
+        View Details
+    </button>
+`);
 
 safetyMarker.on("click", function () {
 
@@ -72,7 +82,17 @@ const infrastructureMarker = L.marker([39.9988, -99.9985], {
     icon: blueIcon
 }).addTo(map);
 
-infrastructureMarker.bindPopup("<b>Broken Streetlight</b><br>Downtown Square");
+infrastructureMarker.bindPopup(`
+    <b>💡 Broken Streetlight</b><br>
+    📍 Downtown Square<br><br>
+
+    <strong>Status:</strong> Verified<br>
+    <strong>Priority:</strong> Medium<br><br>
+
+    <button onclick="window.location.href='issue.html'">
+        View Details
+    </button>
+`);
 
 infrastructureMarker.on("click", function () {
 
@@ -88,7 +108,17 @@ const environmentMarker = L.marker([40.0025, -99.9965], {
     icon: greenIcon
 }).addTo(map);
 
-environmentMarker.bindPopup("<b>Illegal Dumping</b><br>River Walk");
+environmentMarker.bindPopup(`
+    <b>🌿 Illegal Dumping</b><br>
+    📍 River Walk<br><br>
+
+    <strong>Status:</strong> Reported<br>
+    <strong>Priority:</strong> Medium<br><br>
+
+    <button onclick="window.location.href='issue.html'">
+        View Details
+    </button>
+`);
 
 environmentMarker.on("click", function () {
 
@@ -104,7 +134,17 @@ const accessibilityMarker = L.marker([39.9975, -100.0030], {
     icon: violetIcon
 }).addTo(map);
 
-accessibilityMarker.bindPopup("<b>Damaged Sidewalk</b><br>Maple Grove");
+accessibilityMarker.bindPopup(`
+    <b>♿ Damaged Sidewalk</b><br>
+    📍 Maple Grove<br><br>
+
+    <strong>Status:</strong> Investigating<br>
+    <strong>Priority:</strong> High<br><br>
+
+    <button onclick="window.location.href='issue.html'">
+        View Details
+    </button>
+`);
 
 accessibilityMarker.on("click", function () {
 
@@ -152,6 +192,57 @@ applyButton.addEventListener("click", function () {
         map.addLayer(accessibilityMarker);
     } else {
         map.removeLayer(accessibilityMarker);
+    }
+
+});
+// ===== Search Functionality =====
+
+const searchInput = document.getElementById("searchInput");
+
+searchInput.addEventListener("keydown", function (event) {
+
+    if (event.key === "Enter") {
+
+        const search = searchInput.value.toLowerCase();
+
+        if (search.includes("crosswalk")) {
+
+            map.setView([40.0015, -100.0020], 17);
+            safetyMarker.openPopup();
+            safetyMarker.fire("click");
+
+        }
+
+        else if (search.includes("streetlight")) {
+
+            map.setView([39.9988, -99.9985], 17);
+            infrastructureMarker.openPopup();
+            infrastructureMarker.fire("click");
+
+        }
+
+        else if (search.includes("dump")) {
+
+            map.setView([40.0025, -99.9965], 17);
+            environmentMarker.openPopup();
+            environmentMarker.fire("click");
+
+        }
+
+        else if (search.includes("sidewalk")) {
+
+            map.setView([39.9975, -100.0030], 17);
+            accessibilityMarker.openPopup();
+            accessibilityMarker.fire("click");
+
+        }
+
+        else {
+
+            alert("No matching issue found.");
+
+        }
+
     }
 
 });
