@@ -1,6 +1,21 @@
+:root {
+    --primary-color: #2d6cdf;
+    --primary-hover: #1f57bb;
+    --background: #ffffff;
+    --section-bg: #f5f7fb;
+    --card-bg: #ffffff;
+    --text-dark: #1f2937;
+    --text-light: #6b7280;
+    --border: #dddddd;
+    --shadow: 0 2px 8px rgba(0,0,0,0.08);
+    --radius: 10px;
+}
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    background: var(--background);
+    color: var(--text-dark);
+    line-height: 1.6;
 }
 
 nav {
@@ -8,7 +23,11 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 15px 40px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid var(--border);
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .logo {
@@ -26,22 +45,38 @@ nav {
 
 .nav-links a {
     text-decoration: none;
-    color: black;
+    color: var(--text-dark);
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.nav-links a.active {
+    color: var(--primary-color);
+    font-weight: bold;
 }
 
 .signin-btn {
     padding: 10px 20px;
     border: none;
-    background-color: #2d6cdf;
+    background-color: var(--primary-color);
     color: white;
-    border-radius: 5px;
+    border-radius: var(--radius);
     cursor: pointer;
+    transition: 0.3s;
+}
+
+.signin-btn:hover {
+    background: var(--primary-hover);
 }
 .hero {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    gap: 50px;
     padding: 80px 60px;
 }
 
@@ -68,17 +103,27 @@ nav {
 .map-btn {
     padding: 12px 24px;
     border: none;
-    border-radius: 6px;
+    border-radius: var(--radius);
     cursor: pointer;
 }
 
 .report-btn {
-    background-color: #2d6cdf;
+    background-color: var(--primary-color);
     color: white;
+    transition: 0.3s;
+}
+
+.report-btn:hover {
+    background: var(--primary-hover);
 }
 
 .map-btn {
     background-color: #eeeeee;
+    transition: 0.3s;
+}
+
+.map-btn:hover {
+    background-color: #dddddd;
 }
 
 .hero-image {
@@ -93,7 +138,7 @@ nav {
     align-items: center;
 
     border: 2px dashed #999;
-    border-radius: 10px;
+    border-radius: var(--radius);
 }
 .stats {
     display: flex;
@@ -101,23 +146,25 @@ nav {
     gap: 30px;
 
     padding: 40px 60px;
+
+    background: var(--section-bg);
 }
 
 .stat-card {
     width: 200px;
-
     text-align: center;
-
     padding: 25px;
 
-    border-radius: 10px;
+    background: var(--card-bg);
 
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
 }
 
 .stat-card h2 {
     margin: 0;
-    color: #2d6cdf;
+    color: var(--primary-color);
     font-size: 36px;
 }
 
@@ -144,14 +191,14 @@ nav {
     width: 160px;
     padding: 25px;
 
-    border: 1px solid #ddd;
-    border-radius: 10px;
+   border: 1px solid var(--border);
+   border-radius: var(--radius);
 
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+   box-shadow: var(--shadow);
 }
 
 .step h3 {
-    color: #2d6cdf;
+   color: var(--primary-color);
     font-size: 28px;
     margin-bottom: 10px;
 }
@@ -172,10 +219,14 @@ nav {
     padding: 20px;
     margin-bottom: 20px;
 
-    border-radius: 10px;
-    border: 1px solid #ddd;
+   border-radius: var(--radius);
+   border: 1px solid var(--border);
 
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    box-shadow: var(--shadow);
+    transition: 0.3s;
+}
+.issue-card:hover {
+    transform: translateY(-3px);
 }
 
 .issue-card h3 {
@@ -185,20 +236,29 @@ nav {
 .issue-card button {
     padding: 10px 20px;
     border: none;
-    border-radius: 5px;
-
-    background-color: #2d6cdf;
+    border-radius: var(--radius);
+    background-color: var(--primary-color);
     color: white;
     cursor: pointer;
+    transition: 0.3s;
+}
+
+.issue-card button:hover {
+    background: var(--primary-hover);
 }
 .footer {
     text-align: center;
     padding: 30px;
 
-    background-color: #f5f5f5;
+   background: var(--section-bg);
     margin-top: 50px;
 }
 
 .footer p {
     margin: 0;
+}
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
 }
