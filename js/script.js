@@ -63,9 +63,9 @@ safetyMarker.bindPopup(`
     <strong>Status:</strong> Verified<br>
     <strong>Priority:</strong> High<br><br>
 
-    <button onclick="window.location.href='issues.html'">
-        View Details
-    </button>
+    <button onclick="window.location.href='issues.html?id=1'">
+    View Details
+</button>
 `);
 
 safetyMarker.on("click", function () {
@@ -89,9 +89,9 @@ infrastructureMarker.bindPopup(`
     <strong>Status:</strong> Verified<br>
     <strong>Priority:</strong> Medium<br><br>
 
-    <button onclick="window.location.href='issues.html'">
-        View Details
-    </button>
+    <button onclick="window.location.href='issues.html?id=2'">
+    View Details
+</button>
 `);
 
 infrastructureMarker.on("click", function () {
@@ -115,9 +115,9 @@ environmentMarker.bindPopup(`
     <strong>Status:</strong> Reported<br>
     <strong>Priority:</strong> Medium<br><br>
 
-    <button onclick="window.location.href='issues.html'">
-        View Details
-    </button>
+   <button onclick="window.location.href='issues.html?id=3'">
+    View Details
+</button>
 `);
 
 environmentMarker.on("click", function () {
@@ -141,9 +141,9 @@ accessibilityMarker.bindPopup(`
     <strong>Status:</strong> Investigating<br>
     <strong>Priority:</strong> High<br><br>
 
-    <button onclick="window.location.href='issues.html'">
-        View Details
-    </button>
+    <button onclick="window.location.href='issues.html?id=4'">
+    View Details
+</button>
 `);
 
 accessibilityMarker.on("click", function () {

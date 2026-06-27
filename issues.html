@@ -9,8 +9,7 @@
 
     <title>CommunityPulse | Issue Details</title>
 
-    <link rel="stylesheet" href="style.css">
-
+<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -50,9 +49,9 @@
 </section>
 <section class="issue-header">
 
-    <h1>🚸 Missing Crosswalk Near School</h1>
+    <h1 id="issue-title">🚸 Missing Crosswalk Near School</h1>
 
-    <p>
+    <p id="issue-meta">
 
         📍 Harmony Hills High School
 
@@ -82,12 +81,11 @@
         <h2>Issue Summary</h2>
 
         <p><strong>Verification:</strong> 78%</p>
+<p><strong>Reports:</strong> <span id="issue-reports"></span></p>
 
-        <p><strong>Reports:</strong> 23</p>
+<p><strong>Verifications:</strong> <span id="issue-verifications"></span></p>
 
-        <p><strong>Verifications:</strong> 14</p>
-
-        <p><strong>Status:</strong> Verified</p>
+<p><strong>Status:</strong> <span id="issue-status"></span></p>
 
         <button class="report-btn">
 
@@ -104,25 +102,25 @@
 
     <div class="priority-score">
 
-        <h1>88 / 100</h1>
+  <h1 id="priority-score"></h1>
 
-        <span class="priority-label">🔴 HIGH PRIORITY</span>
+<span class="priority-label" id="priority-label"></span>
 
     </div>
 
     <div class="priority-breakdown">
 
-        <p><strong>Severity:</strong> High (40 pts)</p>
+    <p><strong>Severity:</strong> <span id="severity-breakdown"></span></p>
 
-        <p><strong>Reports:</strong> 23 (20 pts)</p>
+<p><strong>Reports:</strong> <span id="reports-breakdown"></span></p>
 
-        <p><strong>Verifications:</strong> 14 (18 pts)</p>
+<p><strong>Verifications:</strong> <span id="verifications-breakdown"></span></p>
 
-        <p><strong>Issue Age:</strong> 7 Days (10 pts)</p>
+<p><strong>Issue Age:</strong> <span id="age-breakdown"></span></p>
 
-        <hr>
+<hr>
 
-        <p><strong>Total Score:</strong> 88</p>
+<p><strong>Total Score:</strong> <span id="total-score"></span></p>
 
     </div>
 
@@ -131,115 +129,39 @@
 
     <h2>Description</h2>
 
-    <p>
-        There is no marked pedestrian crossing outside Harmony Hills High School.
-        Students cross a busy road every morning and afternoon, creating a serious
-        safety risk for children, parents, and drivers. Community members have
-        reported several near misses and believe immediate action is required to
-        improve pedestrian safety.
-    </p>
+    <p id="issue-description"></p>
 
 </section>
 <section class="status-timeline">
 
     <h2>Status Timeline</h2>
 
-    <div class="timeline">
-
-        <div class="timeline-step active">
-            <div class="circle"></div>
-            <p>Reported</p>
-        </div>
-
-        <div class="timeline-step active">
-            <div class="circle"></div>
-            <p>Verified</p>
-        </div>
-
-        <div class="timeline-step">
-            <div class="circle"></div>
-            <p>Consensus</p>
-        </div>
-
-        <div class="timeline-step">
-            <div class="circle"></div>
-            <p>Solution</p>
-        </div>
-
-        <div class="timeline-step">
-            <div class="circle"></div>
-            <p>Resolved</p>
-        </div>
-
-    </div>
-
+   <div class="timeline" id="timeline"></div>
 </section>
 <section class="comments-section">
 
     <h2>Community Comments</h2>
 
-    <div class="comment-card">
-        <p>💬 "Cars rarely stop for children here."</p>
-        <span>— Ahmed • 12 Likes</span>
-    </div>
-
-    <div class="comment-card">
-        <p>💬 "This should be fixed before the next school term."</p>
-        <span>— Sarah • 8 Likes</span>
-    </div>
-
-    <div class="comment-card">
-        <p>💬 "I've witnessed several near misses."</p>
-        <span>— Ali • 15 Likes</span>
-    </div>
+   <div id="comments-container"></div>
 
     <button class="report-btn">
         Add Comment
     </button>
 
 </section>
+
 <section class="solutions-section">
 
     <h2>Proposed Solutions</h2>
 
-    <div class="solution-option">
-        <input type="radio" name="solution">
-        <label>Install Zebra Crossing</label>
-    </div>
+ <div id="solutions-container"></div>
 
-    <div class="solution-option">
-        <input type="radio" name="solution">
-        <label>Add Traffic Signal</label>
-    </div>
-
-    <div class="solution-option">
-        <input type="radio" name="solution">
-        <label>Hire Crossing Guard</label>
-    </div>
-
-    <div class="solution-option">
-        <input type="radio" name="solution">
-        <label>Improve Road Signage</label>
-    </div>
-
-    <button class="report-btn">
-        Propose New Solution
-    </button>
+<button class="report-btn">
+    Propose New Solution
+</button>
 
 </section>
-<section class="next-step">
 
-    <h2>Ready to Build Community Consensus?</h2>
-
-    <p>
-        Review proposed solutions and help the community decide on the best course of action.
-    </p>
-
-    <button class="report-btn" onclick="window.location.href='consensus.html'">
-        Continue to Consensus →
-    </button>
-
-</section>
 <section class="next-step">
     <div class="container">
         <h2>Ready to Help Decide?</h2>
@@ -263,7 +185,8 @@
 
 </footer>
 
-    <script src="script.js"></script>
+<script src="js/issues.js"></script>
+<script src="js/issue-details.js"></script>
 
 </body>
 
