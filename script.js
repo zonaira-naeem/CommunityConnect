@@ -63,7 +63,7 @@ safetyMarker.bindPopup(`
     <strong>Status:</strong> Verified<br>
     <strong>Priority:</strong> High<br><br>
 
-    <button onclick="window.location.href='issue.html'">
+    <button onclick="window.location.href='issues.html'">
         View Details
     </button>
 `);
@@ -89,7 +89,7 @@ infrastructureMarker.bindPopup(`
     <strong>Status:</strong> Verified<br>
     <strong>Priority:</strong> Medium<br><br>
 
-    <button onclick="window.location.href='issue.html'">
+    <button onclick="window.location.href='issues.html'">
         View Details
     </button>
 `);
@@ -115,7 +115,7 @@ environmentMarker.bindPopup(`
     <strong>Status:</strong> Reported<br>
     <strong>Priority:</strong> Medium<br><br>
 
-    <button onclick="window.location.href='issue.html'">
+    <button onclick="window.location.href='issues.html'">
         View Details
     </button>
 `);
@@ -141,7 +141,7 @@ accessibilityMarker.bindPopup(`
     <strong>Status:</strong> Investigating<br>
     <strong>Priority:</strong> High<br><br>
 
-    <button onclick="window.location.href='issue.html'">
+    <button onclick="window.location.href='issues.html'">
         View Details
     </button>
 `);

@@ -24,7 +24,7 @@ nav {
     align-items: center;
     padding: 15px 40px;
     border-bottom: 1px solid var(--border);
-    background: white;
+    background: var(--card-bg);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -177,7 +177,7 @@ nav {
 }
 .how-it-works {
     text-align: center;
-    padding: 70px 40px;
+    padding: 70px 60px;
 }
 
 .how-it-works h2 {
@@ -284,7 +284,7 @@ nav {
 .map-layout {
     display: flex;
     gap: 30px;
-    padding: 40px 60px;
+    padding:0 60px 60px;
 }
 
 /* LEFT PANEL */
@@ -400,7 +400,7 @@ nav {
 /* ISSUE CARD */
 
 .issue-preview {
-    margin: 40px 60px;
+    margin:0 60px 60px;
     padding: 25px;
 
     background: var(--card-bg);
@@ -437,27 +437,25 @@ nav {
 
 /* FLOATING BUTTON */
 
-.floating-report {
+.floating-report{
     position: fixed;
 
     bottom: 30px;
     right: 30px;
 
-    padding: 15px 24px;
-
-    border: none;
-
-    border-radius: 50px;
+    padding: 15px 25px;
 
     background: var(--primary-color);
-
     color: white;
+
+    border: none;
+    border-radius: 50px;
 
     cursor: pointer;
 
     box-shadow: var(--shadow);
 
-    transition: 0.3s;
+    z-index: 2000;
 }
 
 .floating-report:hover {
@@ -467,4 +465,311 @@ nav {
     width: 90%;
     max-width: 1200px;
     margin: auto;
+}
+/* ===== Issue Details Page ===== */
+
+.breadcrumb {
+    padding: 20px 60px 10px;
+    font-size: 15px;
+}
+
+.breadcrumb a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+.issue-header {
+    padding: 20px 60px 50px;
+}
+
+.issue-header h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.issue-header p {
+    font-size: 18px;
+    color: var(--text-light);
+}
+.issue-overview {
+    display: flex;
+    gap: 30px;
+    padding: 0 60px 60px;
+    align-items: stretch;
+}
+
+.issue-photo,
+.issue-summary {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 25px;
+}
+
+.issue-photo {
+    flex: 1;
+}
+
+.issue-photo .placeholder {
+    height: 280px;
+    border: 2px dashed var(--border);
+    border-radius: var(--radius);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    color: var(--text-light);
+}
+
+.issue-summary {
+    flex: 1;
+}
+
+.issue-summary h2 {
+    margin-top: 0;
+    color: var(--primary-color);
+}
+
+.issue-summary p {
+    margin: 12px 0;
+}
+.priority-card{
+    margin: 0 60px 60px;
+    padding: 30px;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.priority-card h2{
+    margin-top:0;
+    color: var(--primary-color);
+}
+
+.priority-score{
+    text-align:center;
+    margin:0 60px 60px;
+}
+
+.priority-score h1{
+    font-size:64px;
+    margin:0;
+    color:#d62828;
+}
+
+.priority-label{
+    display:inline-block;
+    margin-top:10px;
+    padding:8px 18px;
+    background:#ffe5e5;
+    color:#d62828;
+    border-radius:30px;
+    font-weight:bold;
+}
+
+.priority-breakdown p{
+    margin:12px 0;
+    font-size:17px;
+}
+.issue-description{
+    margin:0 60px 60px;
+    padding:30px;
+    background:var(--card-bg);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+}
+
+.issue-description h2{
+    margin-top:0;
+    color:var(--primary-color);
+}
+
+.issue-description p{
+    font-size:17px;
+    line-height:1.8;
+    color:var(--text-dark);
+}
+/* ===== Status Timeline ===== */
+
+.status-timeline{
+    margin:0 60px 60px;
+    padding:30px;
+    background:var(--card-bg);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+}
+
+.status-timeline h2{
+    margin-top:0;
+    color:var(--primary-color);
+}
+
+.timeline{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:40px;
+}
+
+.timeline-step{
+    flex:1;
+    text-align:center;
+    position:relative;
+}
+
+.timeline-step:not(:last-child)::after{
+    content:"";
+    position:absolute;
+    top:15px;
+    left:55%;
+    width:90%;
+    height:4px;
+    background:#d9d9d9;
+    z-index:0;
+}
+
+.circle{
+    width:30px;
+    height:30px;
+    border-radius:50%;
+    background:#d9d9d9;
+    margin:0 auto 12px;
+    position:relative;
+    z-index:1;
+}
+
+.timeline-step.active .circle{
+    background:var(--primary-color);
+}
+
+.timeline-step p{
+    margin:0;
+    font-weight:500;
+}
+/* ===== Community Comments ===== */
+
+.comments-section{
+    margin:0 60px 60px;
+    padding:30px;
+    background:var(--card-bg);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+}
+
+.comments-section h2{
+    margin-top:0;
+    color:var(--primary-color);
+}
+
+.comment-card{
+    padding:18px;
+    margin:20px 0;
+    border-left:5px solid var(--primary-color);
+    background:var(--section-bg);
+    border-radius:8px;
+}
+
+.comment-card p{
+    margin:0 0 10px;
+    font-size:16px;
+}
+
+.comment-card span{
+    color:var(--text-light);
+    font-size:14px;
+}
+/* ===== Proposed Solutions ===== */
+
+.solutions-section{
+    margin:0 60px 60px;
+    padding:30px;
+    background:var(--card-bg);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+}
+
+.solutions-section h2{
+    margin-top:0;
+    color:var(--primary-color);
+}
+
+.solution-option{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:15px;
+    margin:15px 0;
+    background:var(--section-bg);
+    border-radius:8px;
+    transition:0.3s;
+}
+
+.solution-option:hover{
+    background:#e9f1ff;
+}
+
+.solution-option label{
+    cursor:pointer;
+    font-size:16px;
+}
+/* ===== Consistent Section Cards ===== */
+
+.issue-overview,
+.priority-score,
+.description,
+.status-timeline,
+.comments-section,
+.solutions-section,
+.next-step{
+    background:var(--card-bg);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    padding:30px;
+}
+/* ===== Continue to Consensus ===== */
+
+.next-step{
+    margin:0 60px 60px;
+    padding:40px;
+    text-align:center;
+
+    background:var(--card-bg);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+}
+
+.next-step h2{
+    margin-top:0;
+    color:var(--primary-color);
+}
+
+.next-step p{
+    color:var(--text-light);
+    margin-bottom:25px;
+}
+/* =========================
+   Next Step Section
+========================= */
+
+.next-step {
+    padding: 60px 20px;
+    text-align: center;
+    background: var(--section-bg);
+}
+
+.next-step h2 {
+    margin-bottom: 15px;
+}
+
+.next-step p {
+    max-width: 650px;
+    margin: 0 auto 30px;
+    color: var(--text-light);
+}
+
+.next-step .primary-btn {
+    display: inline-block;
 }

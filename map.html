@@ -18,12 +18,12 @@
 
         <div class="logo">CommunityPulse</div>
 
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="map.html" class="active">Map</a></li>
-            <li><a href="dashboard.html">Dashboard</a></li>
-            <li><a href="about.html">About</a></li>
-        </ul>
+       <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="map.html" class="active">Map</a></li>
+    <li><a href="dashboard.html">Dashboard</a></li>
+    <li><a href="about.html">About</a></li>
+</ul>
 
         <button class="signin-btn">Sign In</button>
 
@@ -63,7 +63,6 @@
 
 <label><input type="checkbox" id="accessibility"> Accessibility</label>
 
-<label><input type="checkbox" id="transport"> Transport</label>
 
             <h3>Status</h3>
 
@@ -80,7 +79,7 @@
 
 <p>🟣 Accessibility</p>
 
-          <button class="apply-btn" id="applyFilters">
+         <button class="report-btn" id="applyFilters">
     Apply Filters
 </button>
 
@@ -105,9 +104,11 @@
         14 Community Verifications
     </p>
 
-    <button>
-        View Details
-    </button>
+    <button
+    class="report-btn"
+    onclick="window.location.href='issues.html'">
+    View Details
+</button>
 
 </section>
 
@@ -117,13 +118,15 @@
 
     </button>
 
-    <footer class="footer">
+   <footer class="footer">
 
-        <p>
-            Transparency builds trust. Together we build better communities.
-        </p>
+    <p>
 
-    </footer>
+        Transparency builds trust. Together we build better communities.
+
+    </p>
+
+</footer>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="script.js"></script>
 
